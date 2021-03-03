@@ -1,0 +1,3 @@
+CUDA_VISIBLE_DEVICES=2 python Run_CaKe.
+CUDA_VISIBLE_DEVICES=1 python -m torch.distributed.launch --nproc_per_node=1 Run_CaKe.py
+CUDA_VISIBLE_DEVICES=0 nohup python -m torch.distributed.launch --nproc_per_node=1 Run_CaKe.py >> default.log 2>&1 &
